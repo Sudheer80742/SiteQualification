@@ -1,0 +1,43 @@
+<!-- Studyid,sicod,StaffID,TrainingType,TrainingCompletionDate,TrainerName,CertificationStatus,TrainingNotes" -->
+<c:FragmentDefinition xmlns:c="sap.ui.core" xmlns="sap.m" xmlns:smfo="sap.ui.comp.smartform" xmlns:smfi="sap.ui.comp.smartfield">
+<Dialog >
+<smfo:SmartForm editable="true">
+	<smfo:layout>
+				<smfo:ColumnLayout columnsM="2" columnsL="3" columnsXL="4"/>
+			</smfo:layout>
+<smfo:Group >
+<smfo:GroupElement >
+<smfi:SmartField value="{Studyid}" editable="false"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{sicod}" editable="false"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{StaffID}"/>
+</smfo:GroupElement>
+</smfo:Group>
+<smfo:Group >
+<smfo:GroupElement >
+<smfi:SmartField value="{TrainingType}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{TrainingCompletionDate}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{TrainerName}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{CertificationStatus}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{TrainingNotes}"/>
+</smfo:GroupElement>
+</smfo:Group>
+</smfo:SmartForm>
+<Toolbar >
+<ToolbarSpacer ></ToolbarSpacer>
+<Button text="Add" press="onAdd2"/>
+<Button text="cancel" press="onClose"/>
+</Toolbar>
+</Dialog>
+</c:FragmentDefinition>

@@ -1,0 +1,25 @@
+<c:FragmentDefinition xmlns:c="sap.ui.core" xmlns:m="sap.m" 	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+    >
+    <smarttable:SmartTable
+							entitySet="SCBudgetApproval"
+							enableAutoBinding="true"
+                            tableBindingPath="to_sitecontactbudgetapproval"
+							initiallyVisibleFields="studyid,Sitecode,Contractid,Versionno,ContractSignedDate,BudgetApprovedDate,PaymentTerms,ApprovalNotes"
+                            editable="{data>/edit}"
+                            app:useSmartField="true"
+							id="sec6Add"
+						>
+							<smarttable:customToolbar>
+								<m:Toolbar >
+									<m:ToolbarSpacer ></m:ToolbarSpacer>
+									<m:Button icon="sap-icon://add" press="onAdd"/>
+									<m:Button icon="sap-icon://delete" press="onDelete" type="Transparent" enabled="false"/>
+								</m:Toolbar>
+							</smarttable:customToolbar>
+							<m:Table mode="MultiSelect" selectionChange="onSelectionChange">
+							<m:ColumnListItem ></m:ColumnListItem>
+							</m:Table>
+						</smarttable:SmartTable>
+</c:FragmentDefinition>

@@ -1,0 +1,43 @@
+<!-- Studyid,sicod,VisitDate,Monitorname,AgendaItemsCovered,SitePersonnelPresent,TrainingConducted,SiteReadinessStatus -->
+<c:FragmentDefinition xmlns:c="sap.ui.core" xmlns="sap.m" xmlns:smfo="sap.ui.comp.smartform" xmlns:smfi="sap.ui.comp.smartfield">
+<Dialog >
+<smfo:SmartForm editable="true">
+	<smfo:layout>
+				<smfo:ColumnLayout columnsM="2" columnsL="3" columnsXL="4"/>
+			</smfo:layout>
+<smfo:Group >
+<smfo:GroupElement >
+<smfi:SmartField value="{Studyid}" editable="false"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{sicod}" editable="false"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{VisitDate}"/>
+</smfo:GroupElement>
+</smfo:Group>
+<smfo:Group >
+<smfo:GroupElement >
+<smfi:SmartField value="{Monitorname}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{AgendaItemsCovered}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{SitePersonnelPresent}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{TrainingConducted}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{SiteReadinessStatus}"/>
+</smfo:GroupElement>
+</smfo:Group>
+</smfo:SmartForm>
+<Toolbar >
+<ToolbarSpacer ></ToolbarSpacer>
+<Button text="Add" press="onAdd2"/>
+<Button text="cancel" press="onClose"/>
+</Toolbar>
+</Dialog>
+</c:FragmentDefinition>

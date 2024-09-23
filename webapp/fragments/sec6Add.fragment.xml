@@ -1,0 +1,43 @@
+<!-- studyid,Sitecode,Contractid,Versionno,ContractSignedDate,BudgetApprovedDate,PaymentTerms,ApprovalNotes -->
+<c:FragmentDefinition xmlns:c="sap.ui.core" xmlns="sap.m" xmlns:smfo="sap.ui.comp.smartform" xmlns:smfi="sap.ui.comp.smartfield">
+<Dialog >
+<smfo:SmartForm editable="true">
+	<smfo:layout>
+				<smfo:ColumnLayout columnsM="2" columnsL="3" columnsXL="4"/>
+			</smfo:layout>
+<smfo:Group >
+<smfo:GroupElement >
+<smfi:SmartField value="{studyid}" editable="false"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{Sitecode}" editable="false"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{Contractid}"/>
+</smfo:GroupElement>
+</smfo:Group>
+<smfo:Group >
+<smfo:GroupElement >
+<smfi:SmartField value="{Versionno}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{ContractSignedDate}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{BudgetApprovedDate}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{PaymentTerms}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{ApprovalNotes}"/>
+</smfo:GroupElement>
+</smfo:Group>
+</smfo:SmartForm>
+<Toolbar >
+<ToolbarSpacer ></ToolbarSpacer>
+<Button text="Add" press="onAdd2"/>
+<Button text="cancel" press="onClose"/>
+</Toolbar>
+</Dialog>
+</c:FragmentDefinition>

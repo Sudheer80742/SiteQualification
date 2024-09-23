@@ -1,0 +1,105 @@
+<mvc:View controllerName="rbx.week5.107.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:m="sap.m"
+    xmlns="sap.uxap"
+    xmlns:core="sap.ui.core"
+    >
+        <ObjectPageLayout showFooter="{data>/edit}" >
+                    	<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+				<heading>
+				<m:Title level="H1" text="{Studyid}"/>
+				</heading>
+                <actions>
+ 					<m:Button text="Edit" type="Emphasized" press="onEdit" visible="{= !${data>/edit}}"/>
+					<m:Button type="Transparent" text="Delete" press="onDeleting" visible="{= !${data>/edit}}"/>
+            	</actions>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+		<headerContent>
+			<m:Text text="{SiteCodeDescription}"/>
+		</headerContent>
+		  <footer>
+            <m:OverflowToolbar>
+                <m:ToolbarSpacer />
+                <m:Button
+                    text="save"
+                    type="Accept"
+                    press="onSaving"
+                />
+                <m:Button
+                    text="Cancel"
+					type="Reject"
+                    press="onCancel"
+                />
+            </m:OverflowToolbar>
+        </footer>
+
+        	<sections>
+			<ObjectPageSection titleUppercase="false" title="Site Qualification and Selections">
+			<subSections>
+				<ObjectPageSubSection >
+					<blocks>
+						<core:Fragment  fragmentName="rbx.week5.107.fragments.sec1" type="XML" />
+					</blocks>
+				</ObjectPageSubSection>
+			</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection titleUppercase="false" title="Regulatory Document Collection">
+			<subSections>
+				<ObjectPageSubSection >
+					<blocks>
+						<core:Fragment  fragmentName="rbx.week5.107.fragments.sec2" type="XML" />
+					</blocks>
+				</ObjectPageSubSection>
+			</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection titleUppercase="false" title="Training Management">
+			<subSections>
+				<ObjectPageSubSection >
+					<blocks>
+						<core:Fragment  fragmentName="rbx.week5.107.fragments.sec3" type="XML" />
+					</blocks>
+				</ObjectPageSubSection>
+			</subSections>
+			</ObjectPageSection>
+		
+			<ObjectPageSection titleUppercase="false" title="Site Initiation Visit (SIV)">
+			<subSections>
+				<ObjectPageSubSection >
+					<blocks>
+						<core:Fragment  fragmentName="rbx.week5.107.fragments.sec4" type="XML" />
+					</blocks>
+				</ObjectPageSubSection>
+			</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection titleUppercase="false" title="Activation Checklist">
+			<subSections>
+				<ObjectPageSubSection >
+					<blocks>
+						<core:Fragment  fragmentName="rbx.week5.107.fragments.sec5" type="XML" />
+					</blocks>
+				</ObjectPageSubSection>
+			</subSections>
+			</ObjectPageSection>
+			 <ObjectPageSection titleUppercase="false" title="Site Contracts and Budget Approval">
+			<subSections>
+				<ObjectPageSubSection >
+					<blocks>
+						<core:Fragment  fragmentName="rbx.week5.107.fragments.sec6" type="XML" />
+					</blocks>
+				</ObjectPageSubSection>
+			</subSections>
+			</ObjectPageSection>
+			 <ObjectPageSection titleUppercase="false" title="Essential Documents">
+			<subSections>
+				<ObjectPageSubSection >
+					<blocks>
+						<core:Fragment  fragmentName="rbx.week5.107.fragments.sec7" type="XML" />
+					</blocks>
+				</ObjectPageSubSection>
+			</subSections>
+			</ObjectPageSection>
+            </sections>
+                </ObjectPageLayout>
+</mvc:View>

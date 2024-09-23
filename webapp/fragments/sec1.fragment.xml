@@ -1,0 +1,33 @@
+<!-- "Studyid,SiteCode,SiteCodeDescription,AssessmentScores,QualificationStatus,QualificationDate,QualificationNotes -->
+<c:FragmentDefinition xmlns:c="sap.ui.core" xmlns="sap.m" xmlns:smfo="sap.ui.comp.smartform" xmlns:smfi="sap.ui.comp.smartfield">
+<smfo:SmartForm editable="{data>/edit}">
+	<smfo:layout>
+				<smfo:ColumnLayout columnsM="2" columnsL="3" columnsXL="4"/>
+			</smfo:layout>
+<smfo:Group >
+<smfo:GroupElement >
+<smfi:SmartField value="{Studyid}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{SiteCode}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{SiteCodeDescription}"/>
+</smfo:GroupElement>
+</smfo:Group>
+<smfo:Group >
+<smfo:GroupElement >
+<smfi:SmartField value="{AssessmentScores}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{QualificationStatus}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{QualificationDate}"/>
+</smfo:GroupElement>
+<smfo:GroupElement >
+<smfi:SmartField value="{QualificationNotes}"/>
+</smfo:GroupElement>
+</smfo:Group>
+</smfo:SmartForm>
+</c:FragmentDefinition>

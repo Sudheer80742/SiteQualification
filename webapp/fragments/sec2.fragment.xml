@@ -1,0 +1,28 @@
+<!-- "Studyid,SiteCode,SiteCodeDescription,AssessmentScores,QualificationStatus,QualificationDate,QualificationNotes -->
+<c:FragmentDefinition xmlns:c="sap.ui.core" xmlns:m="sap.m" 	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+    >
+    <smarttable:SmartTable
+							entitySet="RegDocCollection"
+							enableAutoBinding="true"
+                            tableBindingPath="to_RegulatoryDocCollection"
+							initiallyVisibleFields="Studyid,DocumentID,Documentname,SubmissionDate,ApprovalStatus,ApprovalDate,ExpiryDate,Notes"
+                            editable="{data>/edit}"
+                            app:useSmartField="true"
+							id="sec2Add"
+						>
+							<smarttable:customToolbar>
+								<m:Toolbar >
+									<m:ToolbarSpacer ></m:ToolbarSpacer>
+									<m:Button icon="sap-icon://add" press="onAdd"/>
+									<m:Button icon="sap-icon://delete" press="onDelete" type="Transparent" enabled="false"/>
+								</m:Toolbar>
+							</smarttable:customToolbar>
+							<m:Table mode="MultiSelect" selectionChange="onSelectionChange">
+							<m:ColumnListItem >
+								 	<!-- <m:Text text="{Studyid}" /> -->
+							</m:ColumnListItem>
+							</m:Table>
+						</smarttable:SmartTable>
+</c:FragmentDefinition>

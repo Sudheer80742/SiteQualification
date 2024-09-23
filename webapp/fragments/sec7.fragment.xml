@@ -1,0 +1,38 @@
+<!-- "Studyid,SiteCode,SiteCodeDescription,AssessmentScores,QualificationStatus,QualificationDate,QualificationNotes -->
+<c:FragmentDefinition xmlns:c="sap.ui.core" xmlns:m="sap.m" 	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+	xmlns:smartfield="sap.ui.comp.smartfield"
+    >
+    <smarttable:SmartTable
+							entitySet="EssentialDocumentation"
+							enableAutoBinding="true"
+                            tableBindingPath="to_EssentialDocuments"
+							initiallyVisibleFields="Studyid,SiteCode,DocumentID,DocumentName,CollectedDate,Status,ExpiryDate,Notes"
+                            editable="{data>/edit}"
+                            app:useSmartField="true"
+							id="sec7Add"
+						>
+							<smarttable:customToolbar>
+								<m:Toolbar >
+									<m:ToolbarSpacer ></m:ToolbarSpacer>
+									<m:Button icon="sap-icon://add" press="onAdd"/>
+									<m:Button icon="sap-icon://delete" press="onDelete" type="Transparent" enabled="false"/>
+								</m:Toolbar>
+							</smarttable:customToolbar>
+							<m:Table mode="MultiSelect" selectionChange="onSelectionChange">
+							<!-- <m:ColumnListItem >
+								 <m:Text text="{Studyid}" />
+            
+            For SiteCode - always non-editable       
+			   <m:Text text="{SiteCode}" />
+            <m:Input value="{DocumentID}" editable="{data>/edit}" />
+            <m:Input value="{DocumentName}" editable="{data>/edit}" />
+            <m:Input value="{CollectedDate}" editable="{data>/edit}" />
+            <m:Input value="{Status}" editable="{data>/edit}" />
+            <m:Input value="{ExpiryDate}" editable="{data>/edit}" />
+            <m:Input value="{Notes}" editable="{data>/edit}" />
+							</m:ColumnListItem> -->
+							</m:Table>
+						</smarttable:SmartTable>
+</c:FragmentDefinition>
