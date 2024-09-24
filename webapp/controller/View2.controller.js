@@ -82,43 +82,43 @@ sap.ui.define([
 			var oPath = oEvent.getSource().getBindingContext().getPath()
 			var oBj = oEvent.getSource().getBindingContext().getObject()
 			var sSmartTableId = oEvent.getSource().getParent().getParent().getId();
-			var obj,path,id
-			switch (sSmartTableId.slice(-7)) {
-				case "sec2Add":
+			var obj,path
+			switch (true) {
+				case sSmartTableId.endsWith("sec2Add"):
 					path="sec2Add"
 					obj = {
 						Studyid: oBj.Studyid
 					}
 					break
-				case "sec3Add":
+				case sSmartTableId.endsWith("sec3Add"):
 					path="sec3Add"
 					obj = {
 						Studyid: oBj.Studyid,
 						sicod: oBj.SiteCode
 					}
 					break
-				case "sec4Add":
+				case sSmartTableId.endsWith("sec4Add"):
 					path="sec4Add"
 					obj = {
 						Studyid: oBj.Studyid,
 						sicod: oBj.SiteCode
 					}
 					break
-				case "sec5Add":
+				case sSmartTableId.endsWith("sec5Add"):
 					path="sec5Add"
 					obj = {
 						StudyId: oBj.Studyid,
 						SiteCode: oBj.SiteCode
 					}
 					break
-				case "sec6Add":
+				case sSmartTableId.endsWith("sec6Add"):
 					path="sec6Add"
 					obj = {
 						studyid: oBj.Studyid,
 						Sitecode: oBj.SiteCode
 					}
 					break
-				case "sec7Add":
+				case sSmartTableId.endsWith("sec7Add"):
 					path="sec7Add"
 					obj = {
 						Studyid: oBj.Studyid,
@@ -127,6 +127,7 @@ sap.ui.define([
 					break
 				default:
 					console.error("Invalid SmartTable ID: " + sSmartTableId);
+					return
 			}
 			var tableBindingPath = oEvent.getSource().getParent().getParent().getTableBindingPath();
 			var oContext = this._owner.createEntry(`${oPath}/${tableBindingPath}`, {
@@ -136,7 +137,7 @@ sap.ui.define([
 			var sDialog = "rbx.week5.107.fragments."+path
 			var oDialog = this.mDialog[sDialog]
 			if (!oDialog) {
-				this._openFragment("rbx.week5.107.fragments.".concat(path)).then((oFrg) => {
+				this._openFragment("rbx.week5.107.fragments."+path).then((oFrg) => {
 					oFrg.setBindingContext(oContext);
 					this.mDialog[sDialog] = oFrg
 					oFrg.open()
